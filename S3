@@ -1,7 +1,14 @@
-Difference between Block storage & Object Storage ?
-Difference between static website & dynamic website ?
-What are the naming rules ?
-What is the major resource of S3 Bucket ?
+1.Difference between Block storage & Object Storage ?
+--> Object storage stores and manages all data in an unstructured format and in units called objects. Block storage takes any data, like a file or database entry, and divides it into blocks of equal sizes.
+
+2.Difference between static website & dynamic website ?
+--> A static webpage remains the same or fixed, in terms of the content it displays. A dynamic webpage is the opposite, its content changes according to the location of the user, or based on actions a user has made on the page before.
+
+3.What are the naming rules ?
+--> Be no more than 3–63 characters long, including the suffix. Consists only of lowercase letters, numbers and hyphens (-). Begin and end with a letter or number. All bucket names must include the following suffix: azid --x-s3 .
+
+4.What is the major resource of S3 Bucket ?
+-->
 Why do we need to host static websites instead of dynamic websites ?
 What is versioning & Why do we need versioning ?
 What are the objects and types of objects that we are uploading into the S3 Bucket ?
