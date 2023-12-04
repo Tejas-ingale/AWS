@@ -1,0 +1,62 @@
+**Introduction:-**
+ **What is cloud computing ?**
+ =Simply put, cloud computing is the delivery of computing services—including servers, storage, databases, networking, software, analytics, and intelligence—over the Internet (“the cloud”) to offer faster innovation, flexible resources, and economies of scale.
+
+ **Deployment Model in Cloud ?**
+ = The cloud deployment model identifies the specific type of cloud environment based on ownership, scale, and access, as well as the cloud's
+ There are three types of deployment models.
+1.public model
+ 2.private model 
+ 3.hybrid model
+
+ Public Cloud: Services and resources are provided over the public internet and are owned and operated by third-party cloud service providers. These services are available to anyone who wants to use or purchase them. Users share the same hardware, storage, and network devices. Example: AWS, Azure, Google Cloud.
+
+ Private Cloud: Resources are used exclusively by a single organization. They can be managed internally or by a third-party provider and are not shared with other organizations. This model offers more control, security, and customization but requires significant investment and maintenance. Example: VMware, OpenStack.
+
+Hybrid Cloud: This model combines elements of both public and private clouds. It allows data and applications to be shared between them. Organizations can use public cloud resources for non-sensitive operations while keeping sensitive data on a private cloud for enhanced security and control. Example: using a combination of on-premises data centers and public cloud services.
+
+ Each deployment model has its own advantages and trade-offs, and the choice of model depends on an organization's specific needs, security requirements, scalability, and budget considerations.
+
+
+ **Service Model in Cloud ?**
+ = Infrastructure as a Service (IaaS): IaaS provides virtualized computing resources over the internet. Users can rent virtual machines, storage, and networking components from a cloud provider. They have control over the operating systems, applications, and some networking components, but the provider manages the infrastructure's physical hardware. Example: Amazon EC2, Microsoft Azure.
+
+ Platform as a Service (PaaS): PaaS offers a platform that allows customers to develop, run, and manage applications without dealing with the underlying infrastructure. It provides an environment for building, testing, and deploying software applications. Users have control over applications and data, while the provider manages the underlying infrastructure, runtime, middleware, and operating systems. Example: Google App Engine, Heroku.
+
+ Software as a Service (SaaS): SaaS delivers software applications over the internet on a subscription basis. Users can access the software via a web browser without needing to install or maintain it. The provider manages all aspects, including infrastructure, software, maintenance, updates, and security. Example: Google Workspace, Salesforce, Microsoft 365.
+
+Each service model offers different levels of control, management responsibilities, and flexibility for users, allowing them to choose the model that best suits their needs based on factors like scalability, management, and customization requirements.
+
+ **Architecture of Cloud Computing ?**
+. =1. Front End: This is the part that users interact with, such as web browsers, applications, or interfaces used to access the cloud system.
+
+ 2. Back End: The back end includes various servers, storage systems, and a network that form the cloud infrastructure. It consists of:
+
+   a.Servers: These host applications, manage user requests, and store data.
+   b.Storage: Cloud storage allows data and files to be stored and accessed from anywhere.
+   c.Database: Provides a structured way to store and manage data.
+   d.Virtualization: Enables the creation of virtual instances of resources for efficient utilization.
+   e.Middleware: Middleware acts as a bridge between the front end and the back end. It ensures seamless communication and data management across various components.
+
+1. 3.Cloud Services: These are offered via different models like Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).
+
+1. 4.Networking: Networking infrastructure in cloud computing includes the internet, intranets, and data centers, enabling data transmission between front-end and back-end systems.
+
+1. 5.Security Measures: Cloud architecture includes security protocols, encryption methods, and access controls to protect data and systems from unauthorized access
+
+
+ **AWS Global Infrastructure Count ?**
+ = As per my knowledge as on 28-10-2023
+ AWS was operating in 25 geographic regions worldwide
+ Within those regions, there were a total of 81 Availability Zones.
+
+ **Why do we use region ?**
+ =To provide additional scalability and reliability, these data center facilities are   located in different physical locations.
+ E.g
+              An AWS account provides multiple Regions so that you can launch Amazon EC2 instances in locations that meet your requirements. For example, you might want to launch instances in Europe to be closer to your European customers or to meet legal requirements.
+
+
+ **What is service ? & What are resources ?**
+ =1. service -> Basically EC2, IAM, S3, VPC, EFS This are services
+     2. Resources are comes under services like create user, create role, create bucket 
+
