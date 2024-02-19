@@ -1,1 +1,70 @@
+What is EC2, Why do we need EC2 service in cloud computing ?
+:-Amazon Elastic Compute Cloud (EC2) is a web service provided by Amazon Web Services (AWS) that allows users to rent virtual computers (instances) on which 
+  to run their own applications. It provides resizable compute capacity in the cloud, making it easier for developers to scale their computing resources as 
+  needed. 
+  Purpose of EC2 in Cloud Computing:
+  Scalability: EC2 allows users to quickly scale their compute capacity up or down based on demand, ensuring that they have the resources they need when they 
+  need them.
+  Flexibility: Users can choose from a variety of instance types, operating systems, and software configurations to meet their specific requirements.
+  Cost-Effectiveness: With EC2, users only pay for the compute capacity they use, making it a cost-effective solution compared to maintaining physical servers.
+  Reliability: EC2 instances run on AWS's highly reliable infrastructure, providing high availability and fault tolerance.
+  Elasticity: EC2 instances can be easily resized or terminated based on changing workload demands, providing elasticity to the infrastructure.
+
+Features of Amazon EC2 ?
+:-Virtual Machines (Instances): EC2 provides resizable compute capacity in the form of virtual machines (instances) that can run a wide range of 
+  applications.
+  Variety of Instance Types: Users can choose from various instance types optimized for different use cases, such as compute-optimized, memory-optimized, 
+  storage-optimized, etc.
+  Flexible Pricing Options: EC2 offers various pricing options, including On-Demand, Reserved Instances, and Spot Instances, allowing users to optimize 
+  costs based on their usage patterns.
+  Elastic Block Store (EBS): EC2 instances can be attached to durable block storage volumes called Elastic Block Store (EBS), providing persistent storage 
+  for data.
+  Security: EC2 provides robust security features, including security groups, network access control lists (ACLs), and key pairs for SSH access.
+  Auto Scaling: EC2 Auto Scaling allows users to automatically scale their EC2 capacity based on predefined conditions or metrics, ensuring that 
+  applications can handle varying levels of traffic.
+  Load Balancing: EC2 integrates with Elastic Load Balancing (ELB), allowing users to distribute incoming traffic across multiple EC2 instances for improved 
+  availability and fault tolerance.
+
+What is Hypervisor ? and its types ?
+:-A hypervisor, also known as a virtual machine monitor (VMM), is a software layer that enables multiple virtual machines (VMs) to run on a single physical 
+  machine (host). It manages the virtualization of hardware resources, allowing each VM to operate as if it were running on its own dedicated hardware.
+  Types of Hypervisors:
+  Type 1 Hypervisor: Also known as a bare-metal hypervisor, it runs directly on the host's hardware without the need for a host operating system. Examples 
+  include VMware vSphere/ESXi, Microsoft Hyper-V, and Xen.
+  Type 2 Hypervisor: Also known as a hosted hypervisor, it runs on top of a host operating system. Examples include VMware Workstation, Oracle VirtualBox, 
+  and Parallels Desktop.use hypervisor
+  Hypervisors are used in virtualization environments, such as data centers, cloud computing platforms, and desktop virtualization solutions, to consolidate 
+  physical hardware resources and efficiently utilize computing resources.
+
+Steps to create an EC2 instance.
+:-Log in to the AWS Management Console.
+  Navigate to the EC2 service.
+  Click on "Launch Instance" to start the instance creation wizard.
+  Choose an Amazon Machine Image (AMI) to use as the base for your instance.
+  Select an instance type based on your resource requirements.
+  Configure instance details, such as network settings, storage options, and security groups.
+  Optionally, add tags to identify your instance.
+  Review and launch the instance.
+
+EC2 Instance state ?
+:-The state of an EC2 instance indicates its current operational status. The common EC2 instance states include:
+  Pending: The instance is being launched or started.
+  Running: The instance is up and running.
+  Stopped: The instance is stopped but retains its configuration and data.
+  Terminated: The instance has been permanently deleted.
+
+How many types of EC2 Instance-State codes ?
+:-There are several instance-state codes associated with EC2 instances, including pending (0), running (16), shutting down (32), terminated (48), 
+stopping (64), and stopped (80).
+
+What is the meaning of server hibernating mode ?
+:-Server hibernating mode refers to a state where an EC2 instance is stopped but retains its configuration and data in persistent storage (e.g., EBS 
+  volumes). When an instance is in hibernating mode, it can be quickly resumed to its previous state without needing to reinitialize the operating system or 
+  applications. This helps to reduce startup time and maintain the continuity of running services.
+
+
+
+
+
+
 
