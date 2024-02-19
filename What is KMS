@@ -1,1 +1,153 @@
+AWS Amazon EC2 Instance types ?
+:-AWS Amazon EC2 Instance types:
 
+Amazon EC2 offers various instance types optimized for different workloads, including:
+General purpose (e.g., t3, m5)
+Compute optimized (e.g., c5)
+Memory optimized (e.g., r5)
+Storage optimized (e.g., i3)
+Accelerated computing (e.g., p3)
+Burstable performance (e.g., t3)
+
+
+How many types of status checks happen in aws ?
+:- How many types of status checks happen in AWS?
+
+  There are two types of status checks:
+  System Status Checks: Monitor the underlying hardware of an EC2 instance.
+  Instance Status Checks: Monitor the software configuration of an EC2 instance.
+
+When we see the global view option in ec2 service ?
+:-The global view option allows users to view resources across all AWS regions, providing a centralized view of EC2 instances, volumes, snapshots, etc., 
+  irrespective of the region they are located in.
+
+When we logged into the cloud account by default why do we always jump into the north virginia region, why it’s most popular ?
+:-North Virginia (us-east-1) is often the default region because it was one of the first AWS regions and offers a comprehensive set of AWS services. Additionally, it may be preferred due to its proximity to major technology hubs and the availability of diverse services and resources.
+
+What are EBS Volumes and its types ?
+:-Elastic Block Store (EBS) volumes are durable block storage volumes that can be attached to EC2 instances. Types include General Purpose SSD, Provisioned IOPS SSD, Throughput Optimized HDD, and Cold HDD.
+
+Purpose of Using EBS volumes ?
+:-EBS volumes provide persistent block storage for EC2 instances, allowing users to store data independently of the lifecycle of associated instances. They are used for storing operating system data, application data, databases, etc.
+
+How many types of purchasing options do we have in aws ec2 ?
+:-There are three purchasing options: On-Demand Instances, Reserved Instances, and Spot Instances.
+
+Difference between AWS AMI Image & AWS Template ?
+:-AWS AMI (Amazon Machine Image) is a template for the root volume of an EC2 instance, while an AWS Template is a generic term referring to various types of configurations in AWS.
+
+What is NIC & it’s types ?
+:-NIC stands for Network Interface Controller. In AWS EC2, it represents the network interface attached to an instance. Types include primary network interface (eth0) and additional network interfaces.
+
+What is elastic IP ? & WHY were we used ?
+:-An Elastic IP (EIP) is a static IPv4 address designed for dynamic cloud computing. It's used to mask the failure of an instance or software by rapidly remapping the address to another instance in your account.
+
+What is the snapshot of why we use it ?
+:-A snapshot is a point-in-time copy of an EBS volume. It's used for data backup, disaster recovery, and creating new volumes with the same data.
+
+How can we save money in snapshot costing, if an automated snapshot has been created ?
+:-You can save money by managing snapshot lifecycle policies to delete unnecessary snapshots and optimize storage costs.
+
+What is the lifecycle manager in snapshot ?
+:-The lifecycle manager in EBS snapshot allows you to automate the creation, retention, and deletion of snapshots based on policies.
+
+How does the Amazon lifecycle manager work ?
+:-The Amazon EBS Lifecycle Manager automates the creation and deletion of snapshots based on defined policies, ensuring data retention and cost optimization.
+
+Difference between Security Group & NACL ?
+:-Security groups are stateful firewalls that control traffic at the instance level, while Network Access Control Lists (NACLs) are stateless firewalls that control traffic at the subnet level
+
+What are NACL & Its types ?
+:-NACLs (Network Access Control Lists) are stateless firewalls that control traffic at the subnet level. There are inbound and outbound NACLs for managing incoming and outgoing traffic.
+
+How many IP Addresses can we attach to the instances ?
+:-By default, you can attach one primary private IP address per network interface, and you can assign additional secondary private IP addresses based on your instance type and network interface configuration.
+
+How many types of volume states do we have ?
+:-EBS volumes can have several states, including creating, available, in-use, deleting, and deleted.
+
+What is a key pair, and its types ?
+:-A key pair consists of a public key and a private key used for securely accessing EC2 instances. Key pairs can be created and managed in the AWS Management Console. Types include RSA and ECDSA key pairs.
+
+What is load balancer and its types ?
+:-A load balancer distributes incoming application traffic across multiple targets, such as EC2 instances, to ensure high availability and fault tolerance. Types include Classic Load Balancer, Application Load Balancer, and Network Load Balancer.
+
+How does the load balancer work in the backend? Can you explain it ?
+:-Load balancers distribute incoming traffic across multiple backend targets, such as EC2 instances, in a way that optimizes resource utilization, ensures high availability, and improves fault tolerance. They use various algorithms (e.g., round-robin, least connections) to distribute traffic evenly among targets. When a client sends a request, it first reaches the load balancer, which then forwards the request to one of the backend targets based on the configured algorithm.
+
+Features of Load Balancers ?
+:-Some features of load balancers include:
+Health checks to monitor the status of backend targets.
+SSL termination for decrypting HTTPS traffic.
+Sticky sessions to route requests from the same client to the same backend target.
+Connection draining to complete in-flight requests before removing a target from rotation.
+Integration with Auto Scaling to automatically adjust capacity based on traffic load.
+
+What is ASG ? & Its types ?
+:-An Auto Scaling Group (ASG) is a logical grouping of EC2 instances that automatically adjusts its size based on predefined policies or metrics. Types of ASGs include:
+Target Tracking Scaling: Scales based on a target value for a specific metric, such as CPU utilization or request count.
+Step Scaling: Scales based on specified steps and thresholds for a metric.
+Scheduled Scaling: Scales based on predefined schedules, such as time-based or recurring patterns.
+
+What is a Health Check ?
+:-A health check is a mechanism used by load balancers and Auto Scaling groups to monitor the health and availability of backend targets or instances. It periodically sends requests to the targets and evaluates their responses to determine whether they are healthy or not.
+
+What is the threshold ?
+:-The threshold is a predefined value used in monitoring and scaling policies to determine when to take action. For example, in an Auto Scaling policy, a threshold might specify the CPU utilization percentage above which new instances should be launched or below which instances should be terminated.
+
+What is the group of LB ?
+:-The group of LB refers to a set of load balancers that are logically grouped together for management and configuration purposes. For example, you might have multiple load balancers serving different applications or environments within the same group.
+
+Why do we prefer ALB over ALB ?
+:-Application Load Balancer (ALB) offers more advanced features and better integration with modern application architectures, such as support for multiple ports, path-based routing, and host-based routing. It also provides better scalability and performance compared to Classic Load Balancer (CLB).
+
+Difference between Web server & Application server ?
+:-A web server is responsible for serving static content (e.g., HTML, CSS, JavaScript) over the HTTP protocol, while an application server executes dynamic code (e.g., Java servlets, PHP scripts) to generate content dynamically based on client requests.
+
+What is the target group ?
+:- A target group is a logical grouping of targets (e.g., EC2 instances, IP addresses) registered with a load balancer. It defines how the load balancer distributes incoming traffic to the registered targets based on specified criteria, such as routing rules or health status.
+
+What is the desired capacity in ASG ?
+:-The desired capacity in an Auto Scaling Group (ASG) specifies the desired number of instances to maintain at any given time. The ASG automatically adjusts the number of instances to match the desired capacity based on scaling policies or metrics.
+
+How many types of the Scaling option ?
+:-There are three types of scaling options in AWS Auto Scaling:
+Manual Scaling: Manually adjust the number of instances in an Auto Scaling Group (ASG).
+Scheduled Scaling: Define scheduled actions to scale instances based on time or recurring schedules.
+Dynamic Scaling: Automatically adjust the number of instances based on predefined scaling policies or metrics.
+
+Scaling plans ?
+:-Scaling plans are predefined strategies for scaling resources in AWS. They define how resources should scale based on changing demand, workload patterns, or other factors. Scaling plans can be used with AWS Auto Scaling to automate resource scaling.
+
+Types Auto scaling
+:-There are different types of Auto Scaling:
+Horizontal Scaling: Increase or decrease the number of instances in response to changing demand to maintain performance and availability.
+Vertical Scaling: Increase or decrease the size of individual instances (e.g., CPU, memory) to accommodate changes in workload requirements.
+
+Difference between vertical scaling and horizontal scaling ?
+:-Vertical Scaling:
+  Vertical scaling, also known as scaling up or instance resizing, involves increasing or decreasing the capacity of individual resources, such as 
+  increasing the CPU, memory, or storage capacity of a single server.
+  This approach typically involves upgrading the hardware specifications of a single server or instance to handle increased workload or performance 
+  requirements.
+  Vertical scaling is often limited by the maximum capacity of the hardware and may result in downtime during the scaling process, as the instance needs to 
+  be stopped and resized.
+  While vertical scaling can provide a quick solution for increasing capacity, it may not be as cost-effective or scalable in the long term as horizontal 
+  scaling.
+  Horizontal Scaling:
+  Horizontal scaling, also known as scaling out, involves adding or removing multiple instances or servers to distribute the workload across a larger 
+  number of resources.
+  This approach relies on adding more instances or servers to the system to handle increased demand, rather than increasing the capacity of individual 
+  instances.
+  Horizontal scaling is typically achieved through technologies such as load balancers and auto-scaling groups, which automatically add or remove instances 
+  based on predefined criteria or metrics.
+  Horizontal scaling offers better scalability and fault tolerance compared to vertical scaling, as it allows the system to dynamically adjust to changes 
+  in workload without downtime.
+  While horizontal scaling may require more complex infrastructure and management compared to vertical scaling, it offers better performance, reliability, 
+  and cost-effectiveness in the long term, especially for distributed and cloud-based systems.
+
+Difference between AMI & Snapshot ?
+:-An AMI (Amazon Machine Image) is a template for the root volume of an EC2 instance, including the operating system and application software. A snapshot is a point-in-time copy of an EBS volume, used for backup, disaster recovery, and creating new volumes.
+
+What is difference between EBS/EFS/S3
+:-EBS (Elastic Block Store) provides block-level storage volumes for EC2 instances. EFS (Elastic File System) provides scalable file storage for EC2 instances and on-premises servers. S3 (Simple Storage Service) is object storage for storing and retrieving data, accessible via HTTP/HTTPS.
